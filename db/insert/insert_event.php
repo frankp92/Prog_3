@@ -9,8 +9,8 @@ if(isset($_POST['submit']))
 
 $titolo = $_POST['titolo'];
 $descrizione = $_POST['descrizione'];
-$data = $_POST['inizio'];
-$ora = $_POST['orario'];
+$data = $_POST['data'];
+$ora = $_POST['ora'];
 $durata = $_POST['durata'];
 $posti = $_POST['posti'];
 $privacy = $_POST['privacy'];
@@ -73,7 +73,6 @@ if ($conn->query($sq4) === TRUE) {
 } else {
     echo "Error: " . $sq4 . "<br>" . $conn->error;
 }
-
 
 $conn->close();
 ?>

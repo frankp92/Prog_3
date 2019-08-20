@@ -1,29 +1,29 @@
 <?php
-session_start();
+    session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="it">
-<head>
-<title>register</title>
+    <head>
+        <title>Registrazione</title>
 
-<?php
-include 'html/head.php';
-?>
+        <?php
+            include 'html/head.php';
+        ?>
 
-</head>
+    </head>
+    <body>
+        <?php
+            include 'html/navbar.php';
+            if (isset($_SESSION['logged_in']) == TRUE) {
+                header("location: error.php");
+            } else {
+                include 'html/register_form.php';
+            }
 
-<?php
-include 'html/navbar.php';
-if (isset($_SESSION['logged_in']) == TRUE) {
-    header("location: error.php");
-} else {
-    include 'html/register_form.php';
-}
+        ?>      
 
-?>      
-
-</body>
+    </body>
 </html>
 
 

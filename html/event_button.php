@@ -26,11 +26,11 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="example-date-input">Data</label>
-                <input class="form-control" type="text" name="inizio" placeholder="gg-mm-aaaa">
+                <input class="form-control" type="date" name="data" max="2040-12-31" min="2000-01-01">
                 </div>
             <div class="form-group col-md-6">
                 <label for="example-date-input">Ora di inizio</label>
-                <input class="form-control" type="text" name="orario" placeholder="hh-mm">
+                <input class="form-control" type="time" name="ora" max="23:59" min="00:00">
             </div>    
         </div>
         <div class="form-row">

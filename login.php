@@ -1,28 +1,28 @@
 <?php
-session_start();
+    session_start();
 ?>
 
 <!DOCTYPE html>
 <html>
-<head>
-<title>Login</title>
+    <head>
+        <title>Login</title>
 
-<?php
-include 'html/head.php';
-?>
+        <?php
+            include 'html/head.php';
+        ?>
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-<?php
-include 'html/navbar.php';
-if (isset($_SESSION['logged_in']) == TRUE) {
-    header("location: error.php");    
-} else {
-    include 'html/login_form.php';
-}
-?>
+        <?php
+            include 'html/navbar.php';
+            if (isset($_SESSION['logged_in']) == TRUE) {
+                header("location: error.php");    
+            } else {
+                include 'html/login_form.php';
+            }
+        ?>
 
-</body>
+    </body>
 </html>

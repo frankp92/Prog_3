@@ -1,24 +1,24 @@
 <?php
-session_start();
+    session_start();
 ?>
 
 <!DOCTYPE html>
-<html>
-<head>
-<title>Home</title>
+    <html>
+        <head>
+            <title>Smartlab</title>
 
-<?php
-include 'html/head.php';
-?>
+            <?php
+                include 'html/head.php';
+            ?>
 
          
-</head>
-<body class="bg-aldo">
+        </head>
+        <body class="bg-aldo">
   
-<?php
-include 'html/navbar.php';
-include 'html/home_layout.php';
-?>
+            <?php
+                include 'html/navbar.php';
+                include 'html/home_layout.php';
+            ?>
     
-</body>
-</html>
+        </body>
+    </html>

@@ -1,38 +1,38 @@
 <script>
-function myFunction() {
-    var x = document.getElementById("inputState").value;
-    console.log(x)
-    if (x == "professore") {
-      $(function(){
-      $("#includedContent").load("form/form_professore.php"); 
-    });
-    }
-    if (x == "docente"){
-      $(function(){
-      $("#includedContent").load("form/form_docente.php"); 
-    });
-    }
-    if (x == "studente"){
-      $(function(){
-      $("#includedContent").load("form/form_studente.php"); 
-    });
-    }
-    if (x == "personale"){
-      $(function(){
-      $("#includedContent").load("form/form_personale.php"); 
-    });
-    }
-    if (x == "esterno"){
-      $(function(){
-      $("#includedContent").load("form/form_utente.php"); 
-    });
-    }
-    if (x == "default"){
-      $(function(){
-      location.reload(); 
-    });
-    }
-}
+  function myFunction() {
+      var x = document.getElementById("inputState").value;
+      console.log(x)
+      if (x == "professore") {
+        $(function(){
+        $("#includedContent").load("form/form_professore.php"); 
+      });
+      }
+      if (x == "docente"){
+        $(function(){
+        $("#includedContent").load("form/form_docente.php"); 
+      });
+      }
+      if (x == "studente"){
+        $(function(){
+        $("#includedContent").load("form/form_studente.php"); 
+      });
+      }
+      if (x == "personale"){
+        $(function(){
+        $("#includedContent").load("form/form_personale.php"); 
+      });
+      }
+      if (x == "esterno"){
+        $(function(){
+        $("#includedContent").load("form/form_utente.php"); 
+      });
+      }
+      if (x == "default"){
+        $(function(){
+        location.reload(); 
+      });
+      }
+  }
 </script>
 
 <div class="container">

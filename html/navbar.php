@@ -13,6 +13,8 @@
                 echo '<a class="nav-item nav-link" href="#">Progetti</a>';
                 echo '<a class="nav-item nav-link" href="html/logout.php">Logout</a>';
             } else {
+                echo '<a class="nav-item nav-link" href="events.php">Eventi</a>';
+                echo '<a class="nav-item nav-link" href="#">Progetti</a>';
                 echo '<a class="nav-item nav-link" href="login.php">Login</a>';
                 echo '<a class="nav-item nav-link" href="register.php">Registrati</a>';
             }  
