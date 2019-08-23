@@ -17,6 +17,7 @@
   
         <?php
             include 'html/navbar.php';
+            include 'html/footer.php';
         ?>
         <div>
             <h1 style="color: #e8f5e9">Errore</h1>

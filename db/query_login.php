@@ -22,7 +22,7 @@
 
     $sql = "SELECT IDutente, categoria 
             FROM utente
-            WHERE (email = '$email' AND password ='$pass')
+            WHERE (email = '$email' AND password = MD5('$pass'))
             ";
 
     $result = $conn->query($sql);

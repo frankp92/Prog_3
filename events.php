@@ -16,7 +16,7 @@
             <?php
                 include 'html/navbar.php';
                 include 'html/events_content.php';
-
+                include 'html/footer.php';
             ?>    
 
         </body>

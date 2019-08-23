@@ -2,11 +2,11 @@
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="text-input">Nome</label>  
-      <input class="form-control" type="text" name="Nome" placeholder="Nome" required>
+      <input class="form-control" type="text" name="nome" placeholder="Nome" required>
     </div>
     <div class="form-group col-md-6">
       <label for="text-input">Cognome</label>  
-      <input class="form-control" type="text" name="Cognome" placeholder="Cognome" required>
+      <input class="form-control" type="text" name="cognome" placeholder="Cognome" required>
     </div>
   </div>
   <div class="form-row">

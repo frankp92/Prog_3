@@ -30,7 +30,7 @@
     }
 
     $sq2 = "DELETE FROM partecipa 
-            WHERE IDpartecipante ='$id_utente' 
+            WHERE IDpartecipante ='$id_utente'  AND IDevento = '$id_evento'
             ";
 
     if($conn->query($sq2) === TRUE){

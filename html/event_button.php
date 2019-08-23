@@ -17,7 +17,7 @@
       <form method="POST" action="db/insert/insert_event.php">
         <div class="form-group col-md-6">
         <label for="example-text-input">Titolo</label>  
-        <input class="form-control" type="text" name="titolo" required>    
+        <input class="form-control title" type="text" name="titolo" required>    
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Descrizione</label>

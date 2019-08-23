@@ -22,6 +22,7 @@
             } else {
                 include 'html/login_form.php';
             }
+            include 'html/footer.php';
         ?>
 
     </body>

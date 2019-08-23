@@ -53,8 +53,9 @@
     </div>  
   </form>
 </div>
-
-<div class="container" id="includedContent"></div>
+<div class="container"id="page-container">
+<div id="content-wrap">
+<div class="container" id="includedContent"></div></div></div>
 
 
 

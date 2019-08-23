@@ -20,6 +20,7 @@
             } else {
                 include 'html/register_form.php';
             }
+            include 'html/footer.php';
 
         ?>      
 

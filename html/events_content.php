@@ -3,7 +3,8 @@
     include 'db/query_events.php'
 
 ?>
-
+<div class="container"id="page-container">
+<div id="content-wrap">
 <h1>Eventi</h1>
 
 <?php
@@ -79,3 +80,4 @@
     <?php
 }
 ?>
+</div></div>

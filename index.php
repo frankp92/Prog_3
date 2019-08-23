@@ -18,6 +18,7 @@
             <?php
                 include 'html/navbar.php';
                 include 'html/home_layout.php';
+                include 'html/footer.php';
             ?>
     
         </body>
