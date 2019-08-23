@@ -7,7 +7,9 @@
   min-height: 100%;
 
     }
-    body { background-color: rgb(9, 126, 9) ; 
+    body { 
+
+        background: #FFFFF0;
      padding-top: 125px;
     
      
@@ -25,11 +27,24 @@
 
 
    }
-
+   
    .navbar{
 
     padding: 1rem 1rem;
-
+    
+   }
+   .navbar-toggle {
+    z-index:5;
+}
+   #logo
+   {
+    position: absolute;
+    left: calc(50% - 50px);
+    top: 0;
+    text-align: center;
+    margin: auto;
+    padding:0;
+    padding-top: 15px;
    }
 #sticky-footer{
 
@@ -44,7 +59,11 @@
 
 #content-wrap{
 
+    
     padding-bottom:125px;;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
 
 }
 #page-container{

@@ -9,8 +9,11 @@
 
 <?php
     // Creazione eventi per i prof
+    $actual_link = "{$_SERVER['REQUEST_URI']}";
+    $file=explode('?',$actual_link);
+
     if(isset($_SESSION['logged_in']) == TRUE){
-        if ($_SESSION['categoria'] == 'professore'){
+        if ($_SESSION['categoria'] == 'professore' AND $file[0] != '/Smartlab2.0/search.php'){
             include 'event_button.php';
     }}
 ?>
