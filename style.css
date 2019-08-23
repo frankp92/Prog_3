@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+    html{
+        position: relative;
+  min-height: 100%;
+
+    }
+    body { background-color: rgb(9, 126, 9) ; 
+     padding-top: 125px;
+    
+     
+    } 
+   .container{
+
+      margin-bottom:10px;
+      margin-top:10px;
+   }
+   .form-group.col-md-6{
+
+
+      padding-left:0px;
+
+
+
+   }
+
+   .navbar{
+
+    padding: 1rem 1rem;
+
+   }
+#sticky-footer{
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 100px;
+
+
+
+}
+
+#content-wrap{
+
+    padding-bottom:125px;;
+
+}
+#page-container{
+    position: relative;
+  
+
+}
