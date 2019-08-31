@@ -22,7 +22,7 @@
 <?php
 
     foreach ( $array_progetto as $progetto) {
-    
+
 ?>
 
     <?php
@@ -58,9 +58,9 @@
             
             <?php
             if(isset($_SESSION['logged_in']) == TRUE && ($_SESSION['categoria']=='studente' || $_SESSION['categoria']=='personale_tecnico')){
-                if($controllo == 0){
+                if($controllo == 0 && $progetto['Posizioni_aperte'] > 0){
                     include 'html/partecipa_project_button.php'; 
-                } else {    
+                } elseif($progetto['Posizioni_aperte'] > 0) {    
                     include 'html/non_partecipa_project_button.php'; 
                 }} 
              ?>

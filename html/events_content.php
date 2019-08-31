@@ -22,7 +22,10 @@
 <?php
 
     foreach ( $array_eventi as $eventi) {
-    
+
+        print_r(sizeof($array_eventi))
+        
+
 ?>
 
     <?php
@@ -53,9 +56,9 @@
             
             <?php
             if(isset($_SESSION['logged_in']) == TRUE){
-                if($controllo == 0){
+                if($controllo == 0 && $eventi['posti'] > 0){
                     include 'html/partecipa_button.php'; 
-                } else {    
+                } elseif($eventi['posti'] > 0) {    
                     include 'html/non_partecipa_button.php'; 
                 }} 
              ?>

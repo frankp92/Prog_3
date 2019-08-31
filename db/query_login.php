@@ -39,6 +39,8 @@
 
     } else{
         echo "0 results";
+        header("location: ../error.php");    
+
     }
 
     $conn->close();

@@ -20,7 +20,7 @@
             include 'html/footer.php';
         ?>
         <div>
-            <h1 style="color: #e8f5e9">Errore</h1>
+            <h1 style="color: #black">Errore</h1>
         </div>
     </body>
 </html>
