@@ -8,7 +8,7 @@
         <title>Home</title>
 
         <?php
-            include 'html/head.php';
+            include 'html/structure/head.php';
         ?>
 
          
@@ -16,8 +16,8 @@
     <body class="bg-aldo">
   
         <?php
-            include 'html/navbar.php';
-            include 'html/footer.php';
+            include 'html/structure/navbar.php';
+            include 'html/structure/footer.php';
         ?>
         <div>
             <h1 style="color: #black">Errore</h1>

@@ -1,4 +1,4 @@
-<form method="POST" action=<?php echo htmlspecialchars("db/insert/insert_professore.php"); ?>> 
+<form method="POST" action=<?php echo htmlspecialchars("db/insert/insert_utente.php"); ?>> 
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="text-input">Nome</label>  
@@ -53,6 +53,7 @@
       <input type="password" class="form-control" name="password" placeholder="Password" required>
     </div>
   </div>
+  <input type="hidden" name='categoria' value='professore'>
   <button type="submit" class="btn btn-primary" name="submit">Invio</button>
 </form> 
     

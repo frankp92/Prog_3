@@ -8,19 +8,19 @@
         <title>Registrazione</title>
 
         <?php
-            include 'html/head.php';
+            include 'html/structure/head.php';
         ?>
 
     </head>
     <body>
         <?php
-            include 'html/navbar.php';
+            include 'html/structure/navbar.php';
             if (isset($_SESSION['logged_in']) == TRUE) {
                 header("location: error.php");
             } else {
-                include 'html/register_form.php';
+                include 'html/users/register_form.php';
             }
-            include 'html/footer.php';
+            include 'html/structure/footer.php';
 
         ?>      
 

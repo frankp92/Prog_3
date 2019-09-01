@@ -1,4 +1,4 @@
-<form method="POST" action=<?php echo htmlspecialchars('db/insert/insert_utente.php'); ?>>
+<form method="POST" action=<?php echo htmlspecialchars("db/insert/insert_utente.php") ?>>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="example-text-input">Nome</label>  
@@ -29,16 +29,28 @@
       <input type="text" class="form-control" name="titolo" placeholder="Titolo di studio" required>
     </div>
   </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputText">Professione</label>
+      <input type="text" class="form-control" name="professione" placeholder="Professione" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputText">Specializzazione</label>
+      <input type="text" class="form-control" name="specializzazione" placeholder="Specializzazione" required>
+    </div>
+  </div>
+
   <div class="form-row">      
     <div class="form-group col-md-6">
-      <label for="inputEmail">Email</label>
+      <label for="inputEmail4">Email</label>
       <input type="email" class="form-control" name="email" placeholder="Email" required>            
     </div>          
     <div class="form-group col-md-6">
-      <label for="inputPassword">Password</label>
+      <label for="inputPassword4">Password</label>
       <input type="password" class="form-control" name="password" placeholder="Password" required>
     </div>
   </div>
-  <input type="hidden" name='categoria' value='utente_esterno'>
+  <input type="hidden" name='categoria' value='personale_tecnico'>
   <button type="submit" class="btn btn-primary" name="submit">Invio</button>
 </form>

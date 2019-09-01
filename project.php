@@ -7,16 +7,15 @@
         <head>
             <title>Progetti</title>
 
-            <?php
-                include 'html/head.php';
-            ?>
+            <?php include 'html/structure/head.php';?>
          
         </head>
         <body>
             <?php
-                include 'html/navbar.php';
-                include 'html/project_content.php';
-                include 'html/footer.php';
+
+                include 'html/structure/navbar.php';
+                include 'html/projects/project_content.php';
+                include 'html/structure/footer.php';
 
             ?>    
 

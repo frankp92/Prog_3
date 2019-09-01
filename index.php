@@ -8,7 +8,7 @@
             <title>Smartlab</title>
 
             <?php
-                include 'html/head.php';
+                include 'html/structure/head.php';
             ?>
 
          
@@ -16,9 +16,9 @@
         <body class="bg-aldo">
   
             <?php
-                include 'html/navbar.php';
-                include 'html/home_layout.php';
-                include 'html/footer.php';
+                include 'html/structure/navbar.php';
+                include 'html/structure/home_layout.php';
+                include 'html/structure/footer.php';
             ?>
     
         </body>

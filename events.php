@@ -8,15 +8,15 @@
             <title>Eventi</title>
 
             <?php
-                include 'html/head.php';
+                include 'html/structure/head.php';
             ?>
          
         </head>
         <body>
             <?php
-                include 'html/navbar.php';
-                include 'html/events_content.php';
-                include 'html/footer.php';
+                include 'html/structure/navbar.php';
+                include 'html/events/events_content.php';
+                include 'html/structure/footer.php';
             ?>    
 
         </body>

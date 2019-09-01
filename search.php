@@ -8,7 +8,7 @@
             <title>Smartlab</title>
 
             <?php
-                include 'html/head.php';
+                include 'html/structure/head.php';
             ?>
 
          
@@ -17,10 +17,10 @@
   
             <?php
 
-                include 'html/navbar.php';
-                include 'html/footer.php';
-                include 'html/events_content.php';
-                include 'html/project_content.php';
+                include 'html/structure/navbar.php';
+                include 'html/structure/footer.php';
+                include 'html/events/events_content.php';
+                include 'html/projects/project_content.php';
             
             ?>
         </body>
