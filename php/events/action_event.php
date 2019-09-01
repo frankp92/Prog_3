@@ -27,10 +27,10 @@
     
         if($conn->query($sq2) === TRUE){
             echo "New record created successfully";
-            header("location: ../../events.php");
         }else{
             echo "Error: " . $sq2 . "<br>" . $conn->error;
         }
+
     }elseif ($azione=='non_partecipa'){
         
         //aumenta posizioni
@@ -39,9 +39,9 @@
         ";
 
         if($conn->query($sql) === TRUE){
-        echo "Record updated successfully";
+            echo "Record updated successfully";
         }else{
-        echo "Error updating record: " . $conn->error;
+            echo "Error updating record: " . $conn->error;
         }
         
         //elimina partecipante evento
@@ -50,14 +50,14 @@
             ";
         
         if($conn->query($sq2) === TRUE){
-        echo "Delete successfully";
-        header("location: ../../events.php");
+            echo "Delete successfully";
+            header("location: ../../events.php");
         }else{
-        echo "Error: " . $sq2 . "<br>" . $conn->error;
+            echo "Error: " . $sq2 . "<br>" . $conn->error;
         }
+
     }
     
-
     $conn->close();
 
 ?>

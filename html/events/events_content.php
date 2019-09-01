@@ -21,7 +21,6 @@
        
         <h3>Nessun evento</h3> 
         <?php
-
         
     }
     //crea il contenuto della pagina ovvero le schede degli eventi
@@ -32,7 +31,6 @@
             continue;
         }?>
         
-
     <!-- Creazione schede eventi -->
     <div class="container">    
         <div class="card text-center">
@@ -75,6 +73,5 @@
         </div>
     </div>
     
-
 <?php }?>
 </div></div>
