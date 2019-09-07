@@ -27,6 +27,7 @@
     
         if($conn->query($sq2) === TRUE){
             echo "New record created successfully";
+            header("location: ../../events.php");
         }else{
             echo "Error: " . $sq2 . "<br>" . $conn->error;
         }

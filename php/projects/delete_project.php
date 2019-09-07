@@ -20,7 +20,7 @@
             WHERE IDprogetto ='$id' 
     ";
 
-    $result = $conn->query($sq2);
+    $result = $conn->query($sq3);
     if($conn->query($sq3) === TRUE){
         echo "Record deleted successfully";
     }else{
@@ -32,8 +32,32 @@
             WHERE IDprogetto ='$id' 
     ";
 
-    $result = $conn->query($sq2);
+    $result = $conn->query($sq4);
     if($conn->query($sq4) === TRUE){
+        echo "Record deleted successfully";
+    }else{
+        echo "Error deleting record: " . $conn->error;
+    }
+
+    //rimuove da tesi
+    $sq5 = "DELETE FROM tesi 
+    WHERE IDprogetto ='$id' 
+    ";
+
+    $result = $conn->query($sq5);
+    if($conn->query($sq5) === TRUE){
+        echo "Record deleted successfully";
+    }else{
+        echo "Error deleting record: " . $conn->error;
+    }
+
+    //rimuove da lavoro
+    $sq5 = "DELETE FROM lavoro 
+    WHERE IDprogetto ='$id' 
+    ";
+
+    $result = $conn->query($sq5);
+    if($conn->query($sq5) === TRUE){
         echo "Record deleted successfully";
     }else{
         echo "Error deleting record: " . $conn->error;

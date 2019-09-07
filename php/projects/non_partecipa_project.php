@@ -3,8 +3,11 @@
     require('../db_conn.php');
     if(isset($_POST['submit'])){
 
-        $id_utente = $_POST['UId'];
-        $id_progetto = $_POST['IDprogetto']; 
+        $id_utente = $_SESSION['UId'];
+        $categoria_user = $_SESSION['categoria'];
+        $id_progetto = $_POST['IDprogetto'];
+        $tipologia_progetto = $_POST['Tipologia'];
+        $coordinatore = $_POST['IDcoordinatore']; 
 
     }
 
@@ -21,9 +24,16 @@
 
     //rimuove studente dal tirocinio
     if ($_SESSION['categoria'] == 'studente'){
-        $sq2 = "DELETE FROM tirocinio
-        WHERE IDtirocinante = '$id_utente' AND IDprogetto = '$id_progetto'
-        ";        
+        if($tipologia_progetto == 'Tirocinio'){
+            $sq2 = "DELETE FROM tirocinio
+            WHERE IDtirocinante = '$id_utente' AND IDprogetto = '$id_progetto'";
+        }elseif($tipologia_progetto == 'Tesi'){
+            $sq2 = "DELETE FROM tesi
+            WHERE IDrelatore ='$coordinatore' AND IDtesista = '$id_utente' AND IDprogetto = '$id_progetto'";
+        }elseif($tipologia_progetto == 'Lavoro'){
+            $sq2 = "DELETE FROM lavoro
+            WHERE IDlavoratore = '$id_utente' AND IDprogetto = '$id_progetto'";
+        }
     } //rimuove lavortore dal progetto
     elseif ($_SESSION['categoria'] == 'personale_tecnico'){
         $sq2 = "DELETE FROM lavoro

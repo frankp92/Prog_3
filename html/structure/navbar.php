@@ -11,14 +11,14 @@
             if (isset($_SESSION['logged_in']) == TRUE){
                  echo '<a class="nav-item nav-link" href="events.php">Eventi</a>';
                  echo '<a class="nav-item nav-link" href="project.php">Progetti</a>';
-                 echo '<a class="nav-item nav-link" href="html/users/logout.php">Logout</a>';
+                 include 'logout_button.php';
             } else {
                  echo '<a class="nav-item nav-link" href="events.php">Eventi</a>';
                  echo '<a class="nav-item nav-link" href="project.php">Progetti</a>';
                  echo '<a class="nav-item nav-link" href="login.php">Login</a>';
                  echo '<a class="nav-item nav-link" href="register.php">Registrati</a>';
             }
-          
+            
             include 'search_button.php';
           
             ?>

@@ -15,7 +15,7 @@
             include 'event_button.php';
         }
     }
-
+    
     //se non ci sono eventi stampa a video l'avviso
     if(sizeof($array_eventi)==0){?>
        
@@ -44,11 +44,11 @@
             <?php 
                 if(isset($_SESSION['logged_in']) == TRUE){
 
-                    include 'php/events/controllo_partecipazione.php';
+                    include 'php/events/check_partecipazione.php';
                 
-                    if($controllo == 0 && $eventi['posti'] > 0){
+                    if($controllo == 0 AND $eventi['posti'] > 0){
                         include 'partecipa_button.php'; 
-                    } elseif($controllo==1) {    
+                    } elseif($controllo==1 AND $_SESSION['UId'] != $eventi['IDmoderatore']) {    
                         include 'non_partecipa_button.php'; 
                     }
             

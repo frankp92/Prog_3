@@ -16,7 +16,7 @@
         }
     }
 
-    //se non ci sono eventi stampa a video l'avviso
+    //se non ci sono progetti stampa a video l'avviso
     if(sizeof($array_progetto)==0){?>       
 
         <h3>Nessun progetto</h3> 
@@ -25,12 +25,21 @@
     }
     //crea il contenuto della pagina ovvero le schede dei progetti
     foreach ( $array_progetto as $progetto) {
-        //nasconde agli utenti esterni i progetti pubblici
+        //nasconde agli utenti esterni i progetti privati
         if((isset($_SESSION['logged_in']) == FALSE OR $_SESSION['categoria'] == 'utente_esterno') AND $progetto['Privacy'] == 'Privato' ){
                 
             continue;
-        }?>
-    <!-- Creazione schede eventi -->
+        }
+        
+        if(isset($_SESSION['logged_in']) == TRUE){
+            if($_SESSION['categoria'] == 'personale_tecnico' AND ($progetto['Tipologia'] == 'Tesi' OR $progetto['Tipologia'] ==     'Tirocinio')){
+
+                continue;
+
+            }
+        }
+        ?>
+    <!-- Creazione schede progetti -->
     <div class="container">    
         <div class="card text-center">
         <div class="card-header">
@@ -40,29 +49,22 @@
             <h5 class="card-title"><?php echo $progetto['Privacy']; ?> </h5>
             <p class="card-text"><?php echo $progetto['Descrizione']; ?></p>
             
-            <?php 
-            if(isset($_SESSION['logged_in']) == TRUE){
-                if ($_SESSION['categoria'] == 'studente'){
-                    include 'php/projects/controllo_tirocinante.php';
-                }
-                elseif ($_SESSION['categoria'] == 'personale_tecnico'){
-                    include 'php/projects/controllo_lavoratore.php';
-                }
-            } 
+            <?php
+            if(isset($_SESSION['logged_in']) == TRUE AND $_SESSION['categoria'] != 'utente_esterno'){
 
-            if(isset($_SESSION['logged_in']) == TRUE AND ($_SESSION['categoria']=='studente' OR $_SESSION['categoria']=='personale_tecnico')){
-                if($controllo == 0 AND $progetto['Posizioni_aperte'] > 0){
+                include 'php/projects/check_partecipazione.php';
+                
+                if($controllo == 0  AND $progetto['Posizioni_aperte'] > 0){
                     include 'partecipa_button.php'; 
-                } elseif($progetto['Posizioni_aperte'] > 0) {    
+                } elseif($controllo == 1 AND $_SESSION['UId'] != $progetto['IDcoordinatore']) {
                     include 'non_partecipa_button.php'; 
                 }
-            } 
 
-    
-            if( $_SESSION['UId'] == $progetto['IDcoordinatore']) {
-            
-                include 'delete_button.php';
+                if( $_SESSION['UId'] == $progetto['IDcoordinatore']) {
+                
+                    include 'delete_button.php';
 
+                }
             }?>
 
         </div>

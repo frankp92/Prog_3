@@ -18,9 +18,9 @@
             <?php
 
                 include 'html/structure/navbar.php';
-                include 'html/structure/footer.php';
                 include 'html/events/events_content.php';
                 include 'html/projects/project_content.php';
+                include 'html/structure/footer.php';
             
             ?>
         </body>

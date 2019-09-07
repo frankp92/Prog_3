@@ -44,7 +44,7 @@
         <select id="inputState" class="form-control" onchange="myFunction()">
           <option value="default">-</option>
           <option value="professore">Professore</option>
-          <option value="docente">Docente non strutturato</option>
+          <option value="personale non strutturato">Personale non strutturato</option>
           <option value="studente">Studente</option>
           <option value="personale tecnico">Personale tecnico</option>
           <option value="esterno">Utente esterno</option>
