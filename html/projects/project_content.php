@@ -43,10 +43,10 @@
     <div class="container">    
         <div class="card text-center">
         <div class="card-header">
-            <?php echo $progetto['Titolo']; ?>
+            <h3><?php echo $progetto['Titolo']; ?></h3>
         </div>
         <div class="card-body">
-            <h5 class="card-title"><?php echo $progetto['Privacy']; ?> </h5>
+            <h6 class="card-title"><?php echo $progetto['Privacy']; ?> </h6>
             <p class="card-text"><?php echo $progetto['Descrizione']; ?></p>
             
             <?php

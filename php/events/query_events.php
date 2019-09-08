@@ -1,12 +1,8 @@
 <?php
     require('php/db_conn.php');
 
-    //prende l'URL(per search)
-    $actual_link = "{$_SERVER['REQUEST_URI']}";
-    $file=explode('?',$actual_link);//divide il link in base al '?'
-
     //controlla se stiamo cercando qualche evento o se stiamo visualizzando tutti gli eventi semplicemente
-    if($file[0] == '/Smartlab2.0/search.php'){
+    if(isset($_GET['ricerca'])){
 
         $cerca = $_GET['ricerca'];
         $array_eventi = array();

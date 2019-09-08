@@ -35,10 +35,10 @@
     <div class="container">    
         <div class="card text-center">
         <div class="card-header">
-            <?php echo $eventi['titolo']; ?>
+            <h3><?php echo $eventi['titolo']; ?></h3>
         </div>
         <div class="card-body">
-            <h5 class="card-title"><?php echo $eventi['privacy']; ?> </h5>
+            <h6 class="card-title"><?php echo $eventi['privacy']; ?> </h6>
             <p class="card-text"><?php echo $eventi['descrizione']; ?></p>
             
             <?php 

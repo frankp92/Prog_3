@@ -15,11 +15,11 @@
 ?>
 
 <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn btn-secondary dropdown-toggle" role="button" id="dropdownlogout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <?php print_r($email['Email']) ?>
     </button>
     
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <div class="dropdown-menu" aria-labelledby="dropdownlogout">
       <a class="dropdown-item" href="html/users/logout.php">Logout</a>
     </div>
 </div>
