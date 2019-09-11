@@ -12,20 +12,6 @@ $(document).ready(function() {
         var tag = $("#tag").val();
         var UId = $("#UId").val();
 
-        var json = {
-
-            titolo,
-            descrizione,
-            data,
-            ora,
-            durata,
-            posti,
-            privacy,
-            tag,
-            UId
-
-        }
-
         var response = '';
         $.ajax({
 
@@ -35,18 +21,11 @@ $(document).ready(function() {
             dataType: "html",
             success: function(data) {
                 response = data
-                //alert(data);
-                //console.log(response)
+                console.log(response)
+                alert('Evento creato con successo!');
+                window.location.href='https://localhost/Smartlab2.0/events.php'
             }
         })
-        
-        /*var post = new XMLHttpRequest();
-        post.open("POST","php/events/insert_event.php");
-        //post.setRequestHeader('Content-Type', 'application/json')
-        post.onload= function(){
-            console.log(this.responseText);
-        };
-        post.send(json);*/
 
     })
 

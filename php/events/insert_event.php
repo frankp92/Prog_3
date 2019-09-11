@@ -1,20 +1,17 @@
 <?php
     session_start();
     require('../db_conn.php');
-    
-    if(isset($_POST['submit'])){
 
-        $titolo = $_POST['titolo'];
-        $descrizione = $_POST['descrizione'];
-        $data = $_POST['data'];
-        $ora = $_POST['ora'];
-        $durata = $_POST['durata'];
-        $posti = $_POST['posti'];
-        $privacy = $_POST['privacy'];
-        $uid = $_POST['UId'];
-        $tag = $_POST['tag'];
+    $titolo = $_POST['titolo'];
+    $descrizione = $_POST['descrizione'];
+    $data = $_POST['data'];
+    $ora = $_POST['ora'];
+    $durata = $_POST['durata'];
+    $posti = $_POST['posti'];
+    $privacy = $_POST['privacy'];
+    $uid = $_POST['UId'];
+    $tag = $_POST['tag'];
 
-    }
     //Variabile ausiliaria
     $id_evento = "";
 
@@ -27,7 +24,7 @@
         $last_id = $conn->insert_id;
         $id_evento = $last_id;
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        //echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
     //aggiunta moderatore
@@ -35,9 +32,9 @@
           VALUES('$uid', '$last_id') ";  
 
     if ($conn->query($sq2) === TRUE) {
-        echo "New record created successfully.";
+        //echo "New record created successfully.";
     } else {
-        echo "Error: " . $sq2 . "<br>" . $conn->error;
+        //echo "Error: " . $sq2 . "<br>" . $conn->error;
     }
 
     //aggiunta area tematica
@@ -47,9 +44,9 @@
 
     if ($conn->query($sq3) === TRUE) {
         $last_id = $conn->insert_id;
-        echo "New record created successfully. Last inserted ID is: " . $last_id; ;
+        //echo "New record created successfully. Last inserted ID is: " . $last_id; ;
     } else {
-        echo "Error: " . $sq3 . "<br>" . $conn->error;
+        //echo "Error: " . $sq3 . "<br>" . $conn->error;
     }
 
     //aggiunta tag
@@ -57,11 +54,15 @@
           VALUES('$last_id','$id_evento') ";  
 
     if ($conn->query($sq4) === TRUE) {
-        echo "New record created successfully." ;
-        header("location: ../../events.php");
+        //echo "New record created successfully." ;
+        //header("location: ../../events.php");
     } else {
-        echo "Error: " . $sq4 . "<br>" . $conn->error;
+        //echo "Error: " . $sq4 . "<br>" . $conn->error;
     }
+
+    $arrEvento = array($id_evento,$titolo,$descrizione,$data,$ora,$durata,$posti,$privacy,$uid,$tag);
+    $jsonEvento = json_encode($arrEvento);
+    echo($jsonEvento);
 
     $conn->close();
 ?>

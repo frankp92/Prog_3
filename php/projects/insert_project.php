@@ -1,19 +1,17 @@
 <?php
     session_start();
     require('../db_conn.php');
-    if(isset($_POST['submit'])){
         
-        $data_di_creazione = $_POST['Data_di_creazione'];
-        $titolo = $_POST['Titolo'];
-        $descrizione = $_POST['Descrizione'];
-        $tipologia = $_POST['Tipologia'];
-        $durata = $_POST['Durata'];
-        $posizioni_aperte = $_POST['Posizioni_aperte'];
-        $privacy = $_POST['Privacy'];
-        $uid = $_POST['UId'];
-        $tag = $_POST['tag'];
+    $data_di_creazione = $_POST['Data_di_creazione'];
+    $titolo = $_POST['Titolo'];
+    $descrizione = $_POST['Descrizione'];
+    $tipologia = $_POST['Tipologia'];
+    $durata = $_POST['Durata'];
+    $posizioni_aperte = $_POST['Posizioni_aperte'];
+    $privacy = $_POST['Privacy'];
+    $uid = $_POST['UId'];
+    $tag = $_POST['tag'];
 
-    }
     //Variabile ausiliaria
     $id_progetto = "";
     
@@ -26,7 +24,7 @@
         $last_id = $conn->insert_id;
         $id_progetto = $last_id;
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        //echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
     //aggiunta coordinatore
@@ -34,9 +32,9 @@
           VALUES('$uid', '$last_id') ";  
 
     if ($conn->query($sq2) === TRUE) {
-        echo "New record created successfully.";
+        //echo "New record created successfully.";
     } else {
-        echo "Error: " . $sq2 . "<br>" . $conn->error;
+        //echo "Error: " . $sq2 . "<br>" . $conn->error;
     }
 
     //aggiunta area tematica
@@ -46,9 +44,9 @@
 
     if ($conn->query($sq3) === TRUE) {
         $last_id = $conn->insert_id;
-        echo "New record created successfully. Last inserted ID is: " . $last_id; ;
+        //echo "New record created successfully. Last inserted ID is: " . $last_id; ;
     } else {
-        echo "Error: " . $sq3 . "<br>" . $conn->error;
+        //echo "Error: " . $sq3 . "<br>" . $conn->error;
     }
 
     //aggiunta tag
@@ -56,11 +54,15 @@
           VALUES('$last_id','$id_progetto') ";  
 
     if ($conn->query($sq4) === TRUE) {
-        echo "New record created successfully." ;
-        header("location: ../../project.php");
+        //echo "New record created successfully." ;
+        //header("location: ../../project.php");
     } else {
-        echo "Error: " . $sq4 . "<br>" . $conn->error;
+        //echo "Error: " . $sq4 . "<br>" . $conn->error;
     }
+
+    $arrProgetto = array($id_progetto,$data_di_creazione,$titolo,$descrizione,$tipologia,$durata,$posizioni_aperte,$privacy,$uid,$tag);
+    $jsonProgetto = json_encode($arrProgetto);
+    echo($jsonProgetto);
 
     $conn->close();
 ?>
