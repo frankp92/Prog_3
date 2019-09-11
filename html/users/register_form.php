@@ -7,27 +7,27 @@
         $("#includedContent").load("form/form_professore.php"); 
       });
       }
-      if (x == "personale non strutturato"){
+      else if (x == "personale non strutturato"){
         $(function(){
         $("#includedContent").load("form/form_personale_non_strutturato.php"); 
       });
       }
-      if (x == "studente"){
+      else if (x == "studente"){
         $(function(){
         $("#includedContent").load("form/form_studente.php"); 
       });
       }
-      if (x == "personale tecnico"){
+      else if (x == "personale tecnico"){
         $(function(){
         $("#includedContent").load("form/form_personale_tecnico.php"); 
       });
       }
-      if (x == "esterno"){
+      else if (x == "utente_esterno"){
         $(function(){
         $("#includedContent").load("form/form_utente.php"); 
       });
       }
-      if (x == "default"){
+      else{
         $(function(){
         location.reload(); 
       });
@@ -47,7 +47,7 @@
           <option value="personale non strutturato">Personale non strutturato</option>
           <option value="studente">Studente</option>
           <option value="personale tecnico">Personale tecnico</option>
-          <option value="esterno">Utente esterno</option>
+          <option value="utente_esterno">Utente esterno</option>
         </select>
       </div>
     </div>  

@@ -14,51 +14,52 @@
         </button>
       </div>
       <div class="modal-body">
-      <form method="POST" action="php/events/insert_event.php">
+      <form>
         <div class="form-group col-md-6">
         <label for="example-text-input">Titolo</label>  
-        <input class="form-control title" type="text" name="titolo" required>    
+        <input class="form-control title" type="text" name="titolo" id='titolo' required>    
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Descrizione</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descrizione"></textarea>
+            <textarea class="form-control" rows="3" id='descrizione' name="descrizione"></textarea>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="example-date-input">Data</label>
-                <input class="form-control" type="date" name="data" max="2040-12-31" min="2000-01-01">
+                <input class="form-control" type="date" name="data" max="2040-12-31" min="2000-01-01" id='data'>
                 </div>
             <div class="form-group col-md-6">
                 <label for="example-date-input">Ora di inizio</label>
-                <input class="form-control" type="time" name="ora" max="23:59" min="00:00">
+                <input class="form-control" type="time" name="ora" max="23:59" min="00:00" id='ora'>
             </div>    
         </div>
         <div class="form-row">
         <div class="form-group col-md-6">
             <label for="example-text-input">Durata</label>  
-            <input class="form-control" type="text" name="durata" required>    
+            <input class="form-control" type="text" name="durata" id='durata' required>    
         </div>
         <div class="form-group col-md-6">
             <label for="example-text-input">Posti</label>  
-            <input class="form-control" type="text" name="posti" required>
+            <input class="form-control" type="text" name="posti" id='posti' required>
         </div>
         </div>
         <div class="form-row">
         <div class="form-group col-md-6">
         <label for="inputState">Visibilità evento</label>
-        <select id="inputState" class="form-control" name="privacy">
+        <select id='privacy' class="form-control" name="privacy">
           <option selected>Pubblico</option>
           <option>Privato</option>
         </select>
       </div>
         <div class="form-group col-md-6">
               <label for="example-text-input">Tag</label>  
-              <input class="form-control" type="text" name="tag" required>
+              <input class="form-control" type="text" name="tag" id='tag' required>
           </div>
       </div>
-      <input type="hidden" class="form-control" name="UId" value="<?php echo $_SESSION['UId']; ?>">
-      <button type="submit" class="btn btn-primary" name="submit">Crea</button>
-      </form>  
+      <input type="hidden" class="form-control" name="UId" id='UId' value="<?php echo $_SESSION['UId']; ?>">
+      <button type="submit" class="btn btn-primary" name="submit" id ='submit'>Crea</button>
+      </form> 
+      <script src='js/event_create.js'></script> 
       </div>
     </div>
   </div>

@@ -1,0 +1,2 @@
+ID Descrizione Evento: id="exampleFormControlTextarea1"
+ID Visibilità evento (select): id="inputState"

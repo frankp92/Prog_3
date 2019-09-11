@@ -5,7 +5,7 @@
     if(isset($_GET['ricerca'])){
 
         $cerca = $_GET['ricerca'];
-        $array_eventi = array();
+        $titoli = array();
 
         //seleziona gli eventi in base alla ricerca
         $sql = "SELECT Titolo
@@ -14,11 +14,13 @@
             ";
 
         $result = $conn->query($sql);
-        $titolo = $result->fetch_assoc();
-        print_r($titolo['Titolo']);
-        //for ( $array_eventi; $row = $result->fetch_assoc(); $array_eventi[] = $row );
-        
-    }
 
+        for ( $titoli; $row = $result->fetch_assoc(); $titoli[] = $row );
+
+        $titolo=json_encode($titoli);
+        echo($titolo); 
+
+    }
+    
     $conn->close();
 ?>

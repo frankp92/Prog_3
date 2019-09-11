@@ -1,5 +1,5 @@
 </div>
-    <ul class="navbar-nav ml-auto">
+    <div class="navbar-nav ml-auto">
       <form class="form-inline my-2 my-lg-0" method='GET' action='search.php'>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control search mr-sm-2" id='ricerca' type="text" placeholder="Search" aria-label="Search" name='ricerca' required>

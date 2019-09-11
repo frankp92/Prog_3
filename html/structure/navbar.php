@@ -20,7 +20,6 @@
             }
             
             include 'search_button.php';
-          
             ?>
 
           <a class="brand" id="logo" href='index.php'>
