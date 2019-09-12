@@ -1,3 +1,4 @@
+<!-- Creazione dinamica delle schede progetti -->
 <!--query al db per ricevere i progetti-->
 <?php include 'php/projects/query_project.php'?>
 

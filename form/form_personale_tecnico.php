@@ -1,4 +1,4 @@
-<form>
+<form><!-- form per la registrazione del Personale tecnico -->
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="example-text-input">Nome</label>  

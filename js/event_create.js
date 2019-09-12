@@ -1,7 +1,9 @@
+//chiamata ajax per la creazione degli eventi
 $(document).ready(function() {
 
-    $('#submit').click(function(/*e*/){
-        //e.preventDefault()
+    $('#submit').click(function(){//si attiva quando viene cliccato il bottone con id Submit 
+    
+        //prende i valori che gli servono
         var titolo = $("#titolo").val();
         var descrizione = $("#descrizione").val();
         var data = $("#data").val();
@@ -21,7 +23,6 @@ $(document).ready(function() {
             dataType: "html",
             success: function(data) {
                 response = data
-                console.log(response)
                 alert('Evento creato con successo!');
                 window.location.href='https://localhost/Smartlab2.0/events.php'
             }

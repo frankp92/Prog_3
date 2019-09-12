@@ -1,5 +1,6 @@
+<!-- Dropdown per la scelta del tipo di account da registrare -->
 <script>
-  function myFunction() {
+  function myFunction() {//Load dei diversi Form in base alla scelta fatta
       var x = document.getElementById("inputState").value;
       console.log(x)
       if (x == "professore") {

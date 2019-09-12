@@ -1,3 +1,4 @@
+<!-- Campo di ricerca di Eventi e Progetti in base al Titolo -->
 </div>
     <div class="navbar-nav ml-auto">
       <form class="form-inline my-2 my-lg-0" method='GET' action='search.php'>

@@ -1,4 +1,4 @@
-<form method="POST" action="php/projects/non_partecipa_project.php">
+<form method="POST" action="php/projects/non_partecipa_project.php"><!-- bottone per non partecipare ai progetti -->
     <input type="hidden" class="form-control" name="UId" value="<?php $_SESSION['UId']; ?>">
     <input type="hidden" class="form-control" name="IDprogetto" value="<?php echo $progetto['IDprogetto']; ?>">
     <input type="hidden" class="form-control" name="Tipologia" value="<?php echo $progetto['Tipologia']; ?>">

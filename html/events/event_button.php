@@ -1,3 +1,4 @@
+<!-- bottone per la creazione degli eventi -->
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Crea evento
@@ -58,7 +59,7 @@
       </div>
       <input type="hidden" class="form-control" name="UId" id='UId' value="<?php echo $_SESSION['UId']; ?>">
       <button type="submit" class="btn btn-primary" name="submit" id ='submit'>Crea</button>
-      </form> 
+      </form> <!-- script per effettuare una chiamata ajax alla creazione di un evento-->
       <script src='js/event_create.js'></script> 
       </div>
     </div>

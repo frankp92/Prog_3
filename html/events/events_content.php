@@ -1,3 +1,4 @@
+<!-- Creazione dinamica delle schede eventi -->
 <!--query al db per ricevere gli eventi-->
 <?php include 'php/events/query_events.php'?>
 

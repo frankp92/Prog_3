@@ -14,4 +14,3 @@
   </form> 
   <script src='js/login.js'></script>  
 </div>
-<!--End Login Form-->  

@@ -1,3 +1,4 @@
+<!-- Dropdown per il Logout -->
 <?php
     require('php/db_conn.php');
     if(isset($_SESSION['logged_in']) == TRUE){
