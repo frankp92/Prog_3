@@ -16,11 +16,12 @@ $(document).ready(function() {
                 
                 var risultato = JSON.parse(data);
                 if(risultato[0]=='Login fallito!'){
-
+                    
                     window.location.href='https://localhost/Smartlab2.0/error.php'
 
                 }else{
 
+                    console.log(risultato);
                     window.alert('Benvenuto!');
                     window.location.href='https://localhost/Smartlab2.0/index.php'
 

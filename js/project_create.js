@@ -1,8 +1,9 @@
 //chiamata ajax per la creazione dei progetti
 $(document).ready(function() {
 
-    $('#submit').click(function(){//si attiva quando viene cliccato il bottone con id Submit
-
+    $('#submit').click(function(e){//si attiva quando viene cliccato il bottone con id Submit
+        
+        e.preventDefault()
         //prende i valori che gli servono
         var Data_di_creazione = $("#Data_di_creazione").val();
         var Titolo = $("#Titolo").val();

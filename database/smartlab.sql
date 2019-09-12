@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Ago 23, 2019 alle 20:47
+-- Creato il: Set 12, 2019 alle 13:11
 -- Versione del server: 10.1.36-MariaDB
 -- Versione PHP: 7.2.11
 
@@ -41,7 +41,79 @@ INSERT INTO `area_tematica` (`IDareatematica`, `Titolo`) VALUES
 (22, 'evento pubblico'),
 (23, 'evento privato'),
 (24, 'progetto pubblico'),
-(25, 'progetto privato');
+(25, 'progetto privato'),
+(26, 'prova'),
+(27, 'prova'),
+(28, 'priv'),
+(29, 'ciao'),
+(30, 'pub'),
+(31, 'ppp'),
+(32, 't'),
+(33, 'r'),
+(34, 'r'),
+(35, 'e'),
+(36, 'fff'),
+(37, 'sdf'),
+(38, 'dsf'),
+(39, 'priv'),
+(40, 'pu'),
+(41, 're'),
+(42, 're'),
+(43, 're'),
+(44, 'er'),
+(45, 'ew'),
+(46, 'ew'),
+(47, 'qw'),
+(48, 'asd'),
+(49, 'asd'),
+(50, 'asd'),
+(51, 'asd'),
+(52, 'asd'),
+(53, 'asd'),
+(54, 'evp'),
+(55, 'evp'),
+(56, 'asd'),
+(57, 'asd'),
+(58, 'asd'),
+(59, 'sad'),
+(60, 'asd'),
+(61, ''),
+(62, ''),
+(63, ''),
+(64, ''),
+(65, ''),
+(66, ''),
+(67, ''),
+(68, ''),
+(69, ''),
+(70, ''),
+(71, ''),
+(72, ''),
+(73, 'sdfsd'),
+(74, 'sdfsdf'),
+(75, 'qqa'),
+(76, 'dfgd'),
+(77, 'dsvdsv'),
+(78, 'dgd'),
+(79, ''),
+(80, ''),
+(81, ''),
+(82, ''),
+(83, 'asd'),
+(84, 'asd'),
+(85, 'asd'),
+(86, 'asd'),
+(87, 'fsdf'),
+(88, 'dfsdg'),
+(89, 'dssfdg'),
+(90, 'asfsdaf'),
+(91, 'ergse'),
+(92, 'dgvsg'),
+(93, 'sdsdv'),
+(94, 'sdvsdv'),
+(95, 'sfvfs'),
+(96, 'fddfbszfb'),
+(97, 'fvdz');
 
 -- --------------------------------------------------------
 
@@ -59,8 +131,14 @@ CREATE TABLE `coordinatore` (
 --
 
 INSERT INTO `coordinatore` (`IDcoordinatore`, `IDprogetto`) VALUES
-(23, 6),
-(23, 7);
+(23, 24),
+(23, 25),
+(23, 26),
+(23, 27),
+(23, 28),
+(23, 29),
+(23, 30),
+(23, 31);
 
 -- --------------------------------------------------------
 
@@ -79,7 +157,10 @@ CREATE TABLE `docente_strutturato` (
 --
 
 INSERT INTO `docente_strutturato` (`IDds`, `Profilo`, `Dipartimento`) VALUES
-(23, 'Ricercatore', 'Informatica');
+(23, 'Ricercatore', 'Informatica'),
+(37, 'Ordinario', 'dfbdb'),
+(46, 'Ricercatore', 'asdasd'),
+(48, 'Ricercatore', 'sdfsdfg');
 
 -- --------------------------------------------------------
 
@@ -118,8 +199,18 @@ CREATE TABLE `evento` (
 --
 
 INSERT INTO `evento` (`IDevento`, `Titolo`, `Descrizione`, `Data`, `Ora`, `Durata`, `Posti`, `Privacy`) VALUES
-(16, 'Evento pubblico', 'prova evento pubblico', '2019-08-23', '03:03:00', '6', 10, 'Pubblico'),
-(17, 'evento privato', 'prova evento privato', '2019-08-23', '05:05:00', '8', 15, 'Privato');
+(53, 'Evento 1', 'asdasdasd', '2019-09-11', '11:11:00', '3', 12326, 'Pubblico'),
+(54, 'Evento 2', 'asdasd', '2019-09-11', '11:11:00', '3', 7890, 'Pubblico'),
+(55, 'Evento 3', 'asdasd', '2019-09-11', '11:11:00', '3', 5678, 'Pubblico'),
+(56, 'asdasdasd', 'asdasdsad', '2019-09-11', '11:11:00', '3', 2, 'Pubblico'),
+(57, 'dsfsdfdsf', 'dsfdsfdsf', '2019-09-11', '11:11:00', '4', 5, 'Pubblico'),
+(58, 'ddgdsg', 'sdfsdfsf', '2019-09-11', '11:11:00', '3', 67, 'Pubblico'),
+(59, 'dvdsvv', 'vdsdsvdv', '2019-09-11', '11:11:00', '3', 44, 'Pubblico'),
+(60, 'dsfdsf', 'sfsada', '2019-09-11', '22:22:00', '22', 11, 'Pubblico'),
+(61, 'ghh', 'rhrhr', '2019-09-11', '11:11:00', '3', 222, 'Pubblico'),
+(63, 'ergdfgfd', 'sgdfgsdf', '2019-09-12', '11:11:00', '3', 4, 'Pubblico'),
+(64, 'dfbdfbs', 'fdsbfdb', '2019-09-12', '11:11:00', '3', 123456789, 'Pubblico'),
+(65, 'Provaaa', 'dsfsadf', '2019-09-12', '11:11:00', '3', 3, 'Pubblico');
 
 -- --------------------------------------------------------
 
@@ -162,8 +253,18 @@ CREATE TABLE `moderatore` (
 --
 
 INSERT INTO `moderatore` (`IDmoderatore`, `IDevento`) VALUES
-(23, 16),
-(23, 17);
+(23, 53),
+(23, 54),
+(23, 55),
+(23, 56),
+(23, 57),
+(23, 58),
+(23, 59),
+(23, 60),
+(23, 61),
+(23, 63),
+(23, 64),
+(23, 65);
 
 -- --------------------------------------------------------
 
@@ -194,7 +295,12 @@ CREATE TABLE `personale_non_strutturato` (
 --
 
 INSERT INTO `personale_non_strutturato` (`IDpns`, `Qualifica`, `Data_inizio`, `Data_fine`) VALUES
-(24, 'Dottorando', '2019-08-23', '2019-08-23');
+(24, 'Dottorando', '2019-08-23', '2019-08-23'),
+(30, 'Dottorando', '2019-09-01', '2019-09-01'),
+(47, 'Dottorando', '2019-09-11', '0000-00-00'),
+(49, 'Dottorando', '2019-09-11', '0000-00-00'),
+(50, 'Dottorando', '2019-09-11', '2019-09-11'),
+(56, 'Dottorando', '2019-09-11', '2019-09-11');
 
 -- --------------------------------------------------------
 
@@ -213,7 +319,14 @@ CREATE TABLE `personale_tecnico` (
 --
 
 INSERT INTO `personale_tecnico` (`IDpt`, `Professione`, `Specializzazione`) VALUES
-(26, 'Tecnico IT', 'Reti');
+(26, 'Tecnico IT', 'Reti'),
+(31, 'dfbdbf', 'dfbdfb'),
+(32, 'sdfsdf', 'sdfds'),
+(33, 'dfvdvfd', 'dfvdfb'),
+(34, 'vssvd', 'vdssdv'),
+(35, 'sdvs', 'svsv'),
+(36, 'sdvsd', 'sdvds'),
+(52, 'dsfsdvf', 'sdfdsf');
 
 -- --------------------------------------------------------
 
@@ -237,8 +350,14 @@ CREATE TABLE `progetto` (
 --
 
 INSERT INTO `progetto` (`IDprogetto`, `Data_di_creazione`, `Titolo`, `Descrizione`, `Tipologia`, `Durata`, `Posizioni_aperte`, `Privacy`) VALUES
-(6, '2019-08-23', 'progetto pubblico', 'prova progetto pubblico', 'Tesi', 4, 3, 'Pubblico'),
-(7, '2019-08-23', 'progetto privato', 'prova progetto privato', 'Tesi', 6, 4, 'Privato');
+(24, '2019-09-05', 'sadasd', 'ssdasd', 'Tesi', 4, 5, 'Pubblico'),
+(25, '2019-09-05', 'asdasd', 'asdasd', 'Tesi', 3, 4, 'Privato'),
+(26, '2019-09-05', 'asdasd', 'asdasd', 'Tirocinio', 4, 5, 'Pubblico'),
+(27, '2019-09-05', 'asdasd', 'asdasd', 'Tirocinio', 4, 5, 'Privato'),
+(28, '2019-09-05', 'asdasd', 'asdasd', 'Lavoro', 4, 5, 'Pubblico'),
+(29, '2019-09-05', 'asdasd', 'asdasd', 'Lavoro', 4, 5, 'Privato'),
+(30, '2019-09-11', 'dsfsdvf', 'undefined', 'Tesi', 4, 333, 'Pubblico'),
+(31, '2019-09-11', 'xcdvdsv', 'undefined', 'Tesi', 3, 444, 'Pubblico');
 
 -- --------------------------------------------------------
 
@@ -280,7 +399,17 @@ CREATE TABLE `studente` (
 --
 
 INSERT INTO `studente` (`IDs`, `Tipo_di_corso`, `Corso_di_studio`, `Anno_corso`) VALUES
-(25, 'Triennale', 'Informatica', 3);
+(25, 'Triennale', 'Informatica', 3),
+(28, 'Triennale', 'asdasdasd', 3),
+(29, 'Triennale', 'asdasdasd', 1),
+(39, 'Triennale', 'prova', 3),
+(40, 'Triennale', 'prova 2', 3),
+(41, 'Triennale', '3', 3),
+(42, 'Triennale', 'proova', 3),
+(43, 'Triennale', 'asdasd', 3),
+(44, 'Triennale', 'asdasd', 3),
+(45, 'Triennale', 'asdasdasd', 3),
+(51, 'Triennale', 'sdfsdf', 0);
 
 -- --------------------------------------------------------
 
@@ -298,8 +427,18 @@ CREATE TABLE `tag_e` (
 --
 
 INSERT INTO `tag_e` (`IDareatematica`, `IDevento`) VALUES
-(22, 16),
-(23, 17);
+(83, 53),
+(84, 54),
+(85, 55),
+(86, 56),
+(87, 57),
+(88, 58),
+(89, 59),
+(90, 60),
+(91, 61),
+(95, 63),
+(96, 64),
+(97, 65);
 
 -- --------------------------------------------------------
 
@@ -317,8 +456,14 @@ CREATE TABLE `tag_p` (
 --
 
 INSERT INTO `tag_p` (`IDareatematica`, `IDprogetto`) VALUES
-(24, 6),
-(25, 7);
+(48, 24),
+(49, 25),
+(50, 26),
+(51, 27),
+(52, 28),
+(53, 29),
+(93, 30),
+(94, 31);
 
 -- --------------------------------------------------------
 
@@ -373,7 +518,36 @@ INSERT INTO `utente` (`IDutente`, `Nome`, `Cognome`, `Indirizzo`, `Telefono`, `E
 (24, 'Docente ', 'non Strutturato', 'Via Roma', '96548484', 'docente@nonstruttura', 'Laurea', 'pncgertsgetdfqua', 'personale_non_strutt', 'e10adc3949ba59abbe56e057f20f883e'),
 (25, 'Primo', 'Studente', 'Via Roma', '096585858', 'primo@studente', 'Laurea', 'yhetfgchwpanhlfh', 'studente', 'e10adc3949ba59abbe56e057f20f883e'),
 (26, 'Personale', 'Tecnico', 'Via Roma', '096586897', 'personale@tecnico', 'Diploma', 'htysgamsltoghdje', 'personale_tecnico', 'e10adc3949ba59abbe56e057f20f883e'),
-(27, 'Utente', 'Esterno', 'Via Roma', '096585698', 'utente@esterno', 'Diploma', 'mlvjfyrutlcieltu', 'utente_esterno', 'e10adc3949ba59abbe56e057f20f883e');
+(27, 'Utente', 'Esterno', 'Via Roma', '096585698', 'utente@esterno', 'Diploma', 'mlvjfyrutlcieltu', 'utente_esterno', 'e10adc3949ba59abbe56e057f20f883e'),
+(28, 'Secondo', 'Studente', 'Via Roma', '45678912', 'secondo@studente', 'asdasdasd', 'sdasd', 'studente', 'e10adc3949ba59abbe56e057f20f883e'),
+(29, 'terzo', 'studente', 'Via Roma', '456456456', 'terzo@studente', 'asdasdasd', 'asdasdasd', 'studente', 'e10adc3949ba59abbe56e057f20f883e'),
+(30, 'fdgdg', 'dfgdfg', 'dfgdfg', 'dfgdfg', 'a@a', 'fdgfdg', 'fdgfdg', 'personale_non_strutt', 'e10adc3949ba59abbe56e057f20f883e'),
+(31, 'fdvdfv', 'dsvfdfv', 'fdvdfv', 'fdvdb', 'a@a', 'dfbdf', 'dfvdv', 'personale_tecnico', 'e10adc3949ba59abbe56e057f20f883e'),
+(32, 'dfbfb', 'dfdg', 'dfdg', 'dfbdfb', 'a@b', 'dfsf', 'ffs', '', 'e10adc3949ba59abbe56e057f20f883e'),
+(33, 'dbdgfbfdb', 'dbdb', 'dbdb', 'dbdb', 'a@a', 'dfbdfb', 'dfbdbdfbdfb', '', 'aec6500cec2a7aea5d70d829fd8cba9e'),
+(34, 'dsvsdv', 'vdssdv', 'sdvsdv', 'sdvsdv', 'a@a', 'sdvsd', 'sdvsdv', 'personale_tecnico', 'fa64277b398c2837bdd610f4129c41a3'),
+(35, 'dsgsd', 'dsfsdf', 'dvsdds', 'dsdvsss', 'a@c', 'sdvsdv', 'sdvdsv', 'personale_tecnico', 'e10adc3949ba59abbe56e057f20f883e'),
+(36, 'dvsv', 'sdvsd', 'svsdv', 'sdvsdv', 'g@g', 'sdvsd', 'sdvsvdds', 'personale_tecnico', 'e10adc3949ba59abbe56e057f20f883e'),
+(37, 'dfbdfbd', 'fdbfdb', 'dfbdfb', 'dfbbf', 'pippo@pippo', 'dfbdfb', 'fbfdb', 'professore', 'e10adc3949ba59abbe56e057f20f883e'),
+(38, 'fdvdv', 'dvdf', 'dvfdv', 'dfvdf', 'pippuzzo@pippo', 'dfvdf', 'dfvdf', 'utente_esterno', 'e10adc3949ba59abbe56e057f20f883e'),
+(39, 'prova', 'prova', 'prova', 'prova', 'pr@pr', 'prova', 'prova', 'studente', 'c4ca4238a0b923820dcc509a6f75849b'),
+(40, 'prova 2', 'prova 2', 'prova 2', 'prova 2', 'pr2@pr2', 'prova 2', 'prova 2', 'studente', 'c4ca4238a0b923820dcc509a6f75849b'),
+(41, 'prova 3', 'prova 3', 'prova 3', 'prova 3', 'pr3@pr3', 'prova 3', 'prova 3', 'studente', 'c4ca4238a0b923820dcc509a6f75849b'),
+(42, 'proova', 'proova', 'proova', 'proova', 'prr@prr', 'proova', 'proova', 'studente', 'e10adc3949ba59abbe56e057f20f883e'),
+(43, 'asdasd', 'asdasd', 'asdasd', 'asdasd', 'aasd@asd', 'asdasd', 'asdasd', 'studente', 'c4ca4238a0b923820dcc509a6f75849b'),
+(44, 'asdasd', 'asdasd', 'asdsad', 'asdasd', 'asdasd@asd', 'asdasd', 'asdsad', 'studente', '7815696ecbf1c96e6894b779456d330e'),
+(45, 'asdasdasd', 'asdasdasd', 'asdasdasd', 'asdasdasd', 'asd@asdasd', 'asdasdasd', 'asdasdasd', 'studente', 'c4ca4238a0b923820dcc509a6f75849b'),
+(46, 'asdasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd@p', 'asdasd', 'asdasd', 'professore', 'c4ca4238a0b923820dcc509a6f75849b'),
+(47, 'asdasdasd', 'asdasdasd', 'asdasdasd', 'asdasdasd', 'asdp@sad', 'asdsadasd', 'asdasdasd', 'personale_non_strutt', 'c4ca4238a0b923820dcc509a6f75849b'),
+(48, 'sdFsdfsd', 'dsfsdf', 'sdfsfa', 'dfsf', 'rt@rt', 'sdfsdf', 'dsfsdf', 'professore', 'c4ca4238a0b923820dcc509a6f75849b'),
+(49, 'dfgdfg', 'sdfsfd', 'sdfsfd', 'dsfsdf', 'ry@ry', 'sdfsdf', 'dsfsdf', 'personale_non_strutt', 'c4ca4238a0b923820dcc509a6f75849b'),
+(50, 'dsfsdggsd', 'sdgdsfg', 'sdgsdg', 'dsgdsg', 'ru@ru', 'sdfgdsg', 'sdfgfdg', 'personale_non_strutt', 'c4ca4238a0b923820dcc509a6f75849b'),
+(51, 'sdgfsgdv', 'sdgfsa', 'dsfds', 'dsfdsf', 'ri@ri', 'asfsdf', 'dsfdsf', 'studente', 'c4ca4238a0b923820dcc509a6f75849b'),
+(52, 'dvsdv', 'sdgfsd', 'dsfsdf', 'dsfds', 'ro@ro', 'fdsvgfdv', 'sdfdsf', 'personale_tecnico', 'e10adc3949ba59abbe56e057f20f883e'),
+(53, 'dsfsdsd', 'sdgffdsfg', 'dsfsdv', 'dsfsdf', 'rp@rp', 'dsfds', 'sdfsdf', 'utente_esterno', 'c4ca4238a0b923820dcc509a6f75849b'),
+(54, 'dvsds', 'dsvdsv', 'sdvdsv', 'sdvdsv', 'ra@ra', 'sdvdsv', 'dsvsd', 'utente_esterno', 'c4ca4238a0b923820dcc509a6f75849b'),
+(55, 'sdvdsvds', 'svsdv', 'sdvds', 'sdvds', 'rs@rs', 'dsvdsv', 'sdvsd', 'utente_esterno', 'c4ca4238a0b923820dcc509a6f75849b'),
+(56, 'sdfsdfvc', 'sdfdsvg', 'sdfsdvf', 'dsvfdsv', 'rg@rg', 'sdvdsv', 'dsfvsdv', 'personale_non_strutt', 'c4ca4238a0b923820dcc509a6f75849b');
 
 -- --------------------------------------------------------
 
@@ -542,7 +716,7 @@ ALTER TABLE `utilizzo`
 -- AUTO_INCREMENT per la tabella `area_tematica`
 --
 ALTER TABLE `area_tematica`
-  MODIFY `IDareatematica` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `IDareatematica` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT per la tabella `documento`
@@ -554,7 +728,7 @@ ALTER TABLE `documento`
 -- AUTO_INCREMENT per la tabella `evento`
 --
 ALTER TABLE `evento`
-  MODIFY `IDevento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `IDevento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT per la tabella `materiale`
@@ -566,13 +740,13 @@ ALTER TABLE `materiale`
 -- AUTO_INCREMENT per la tabella `progetto`
 --
 ALTER TABLE `progetto`
-  MODIFY `IDprogetto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `IDprogetto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT per la tabella `utente`
 --
 ALTER TABLE `utente`
-  MODIFY `IDutente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `IDutente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- Limiti per le tabelle scaricate

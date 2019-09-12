@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     $('#submit').click(function(e){
+        
         e.preventDefault()
         var nome = $("#nome").val();
         var cognome = $("#cognome").val();
