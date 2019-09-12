@@ -36,17 +36,6 @@
         }
     }
 
-    if($controllo == 0 AND $eventi['posti'] > 0){
-        include 'html/events/partecipa_button.php'; 
-    } elseif($controllo == 1 AND $_SESSION['UId'] != $eventi['IDmoderatore']) {    
-        include 'html/events/non_partecipa_button.php'; 
-    }
-
-    if( $_SESSION['UId'] == $eventi['IDmoderatore']) {
-
-        include 'html/events/delete_button.php'; 
-        
-    }
     $conn->close();
 
 ?>

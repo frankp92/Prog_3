@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
-    $('#submit').click(function(/*e*/){
-        //e.preventDefault()
+    $('#submit').click(function(){
         
         var email = $("#email").val();
         var password = $("#password").val();
@@ -14,13 +13,20 @@ $(document).ready(function() {
             data: "email=" + email + "&password=" + password,
             dataType: "html",
             success: function(data) {
-                response = data
-                console.log(response)
-                window.location.href='https://localhost/Smartlab2.0/index.php'
+                
+                var risultato = JSON.parse(data);
+                if(risultato[0]=='Login fallito!'){
+
+                    window.location.href='https://localhost/Smartlab2.0/error.php'
+
+                }else{
+
+                    window.alert('Benvenuto!');
+                    window.location.href='https://localhost/Smartlab2.0/index.php'
+
+                }
             }
         })
-
     })
-
 })
 

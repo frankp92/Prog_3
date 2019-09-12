@@ -47,17 +47,17 @@
                     include 'php/events/check_partecipazione.php';
 
 
-                    //if($controllo == 0 AND $eventi['posti'] > 0){
-                    //    include 'partecipa_button.php'; 
-                    //} elseif($controllo == 1 AND $_SESSION['UId'] != $eventi['IDmoderatore']) {    
-                    //    include 'non_partecipa_button.php'; 
-                    //}
-            //
-                    //if( $_SESSION['UId'] == $eventi['IDmoderatore']) {
-           //
-                    //    include 'delete_button.php'; 
-                    //    
-                    //}
+                    if($controllo == 0 AND $eventi['posti'] > 0){
+                        include 'partecipa_button.php'; 
+                    } elseif($controllo == 1 AND $_SESSION['UId'] != $eventi['IDmoderatore']) {    
+                        include 'non_partecipa_button.php'; 
+                    }
+            
+                    if( $_SESSION['UId'] == $eventi['IDmoderatore']) {
+           
+                        include 'delete_button.php'; 
+                        
+                    }
                 }
             ?>
 

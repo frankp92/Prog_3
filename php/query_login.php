@@ -2,12 +2,8 @@
     session_start();
     require('db_conn.php');
 
-    //if(isset($_POST['submit'])){
-
     $email = $_POST['email'];
     $pass = $_POST['password']; 
-
-    //}
 
     //cerca l'utente
     $sql = "SELECT IDutente, categoria 
@@ -18,20 +14,23 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0){
+
         $row = $result->fetch_assoc(); 
-        //echo "IDutente: " . $row["IDutente"]. " - Categoria: " . $row["categoria"]. "<br>";
+        
         //modifica variabili di sessione
         $_SESSION['UId'] = $row["IDutente"];
         $_SESSION['categoria'] = $row["categoria"];
         $_SESSION['logged_in'] = TRUE;
-        $arrLogin = array($email,$pass);
+
+        $arrLogin = array($email,$_SESSION['UId'],$_SESSION['categoria'],$_SESSION['logged_in']);
         $jsonLogin = json_encode($arrLogin);
         echo($jsonLogin);
-        //header("location: ../index.php");
 
-    } else{
-        echo "0 results";
-        //header("location: ../error.php");    
+    }else{
+
+        $arrLogin = array('Login fallito!');
+        $jsonLogin = json_encode($arrLogin);
+        echo($jsonLogin);
 
     }
 
